@@ -1345,3 +1345,19 @@ html, body {
     box-shadow: 0 0 25px rgba(0, 255, 65, 0.8), 0 0 50px rgba(0, 255, 65, 0.4) !important;
     transform: scale(1.05);               /* Leggero ingrandimento */
 }
+
+/* Inserisci questo in fondo al tuo style.css */
+.btn-vibe-color {
+    display: inline-block !important;
+    background-color: transparent !important;
+    color: #00ff41 !important;
+    border: 2px solid #00ff41 !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.btn-vibe-color:hover {
+    background-color: #00ff41 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.8) !important;
+    transform: translateY(-3px) !important;
+}
