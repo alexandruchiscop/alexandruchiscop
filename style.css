@@ -1333,3 +1333,15 @@ html, body {
     color: #fff !important;
     box-shadow: 0 0 20px rgba(214, 51, 255, 0.8) !important;
 }
+
+/* --- ACCENSIONE PULSANTE VERDE --- */
+.btn-vibe-color {
+    transition: all 0.3s ease-in-out !important;
+}
+
+.btn-vibe-color:hover {
+    background-color: #00ff41 !important; /* Riempimento pieno */
+    color: #000000 !important;           /* Testo nero per contrasto */
+    box-shadow: 0 0 25px rgba(0, 255, 65, 0.8), 0 0 50px rgba(0, 255, 65, 0.4) !important;
+    transform: scale(1.05);               /* Leggero ingrandimento */
+}
