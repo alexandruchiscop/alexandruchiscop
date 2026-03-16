@@ -1,0 +1,1287 @@
+/* 1. SETUP E TIPOGRAFIA */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap');
+
+/* VALORI DI DEFAULT (TEMA DARK) */
+:root {
+    --primary: #00a8ff;
+    --bg: #0a0a0a;           /* Nero profondo */
+    --card-bg: #161616;      /* Grigio scuro per le schede */
+    --text: #f5f5f5;         /* Bianco sporco */
+    --text-muted: #a0a0a0;   /* Grigio per i testi secondari */
+    --nav-border: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. NAVIGAZIONE */
+nav {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--nav-border);
+    margin-bottom: 60px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--text) !important;
+    text-decoration: none;
+    letter-spacing: -2px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    color: var(--primary) !important;
+transform: scale(1.05);}
+
+/* 3. HEADER E TITOLI */
+header {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 60px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    color: var(--text);
+}
+
+h2 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid var(--primary);
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* PORTA TUTTO L'HEADER IN PRIMO PIANO */
+header h1, 
+header .hero-subtitle {
+    position: relative;        /* Necessario per attivare lo z-index */
+    z-index: 99;               /* Un valore alto per stare sopra il bagliore da 1000px */
+    color: #ffffff !important; /* Bianco puro per massima leggibilità */
+}
+
+header .hero-subtitle {
+    opacity: 0.9;              /* Leggermente meno intenso del titolo per gerarchia, ma sempre bianco */
+    font-weight: 500;
+    text-shadow: 0 2px 15px rgba(0,0,0,0.8); /* Ombra scura per "staccare" dal viola neon sottostante */
+}
+
+/* ASSICURATI CHE IL CONTENITORE DEL GLOW STIA SOTTO */
+.cover-container {
+    position: relative;
+    z-index: 1;                /* Layer di base per il bagliore */
+}
+
+/* 4. IMMAGINE PROFILO */
+.profile-pic {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--primary);
+    margin: 30px auto;
+    display: block;
+    animation: fadeInScale 1.2s ease-out forwards, pulseGlow 3s ease-in-out infinite;
+}
+
+/* 5. CARD E PROGETTI */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid var(--nav-border);
+    transition: 0.4s;
+    margin-bottom: 30px;
+    /* FORZA TUTTO A SINISTRA */
+    align-items: flex-start; 
+    text-align: left;
+}
+
+.project-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 168, 255, 0.1);
+}
+
+.tag {
+    background: rgba(0, 168, 255, 0.1);
+    color: var(--primary);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+/* 6. GALLERIA */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid var(--nav-border);
+    transition: transform 0.4s ease, border-color 0.4s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    border-color: var(--primary);
+}
+
+/* 7. PAGINA CONTATTI */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid var(--nav-border);
+    transition: 0.3s all ease;
+}
+
+.contact-card i {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px rgba(0, 168, 255, 0.2);
+}
+
+/* 8. BOTTONI E ELEMENTI SECONDARI */
+.btn-contact {
+    display: inline-block;
+    background-color: rgba(0, 168, 255, 0.1);
+    color: var(--primary) !important;
+    border: 2px solid var(--primary);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s all ease;
+    margin-top: 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.btn-contact:hover {
+    background-color: var(--primary);
+    color: #fff !important;
+    transform: scale(1.05); /* Effetto ingrandimento quando ci passi sopra */
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.4);
+}
+
+.secondary {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+/* 9. ANIMAZIONI E MEDIA QUERIES */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8) translateY(20px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 30px hsla(200, 100%, 50%, 0.3); transform: scale(1); }
+    50% { box-shadow: 0 0 60px rgba(0, 168, 255, 0.6); transform: scale(1.02); }
+}
+
+@media (min-width: 900px) {
+    .project-card.featured {
+        grid-column: 1 / -1;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        padding: 50px;
+    }
+    .project-card.featured .project-gallery, 
+    .project-card.featured .card-content { flex: 1; }
+}
+
+/* 10. FOOTER - SPAZIATURA FINALE */
+footer {
+    padding-bottom: 80px; /* Aumentiamo lo spazio bianco (nero) in fondo */
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Opzionale: se vuoi che la linea orizzontale sia meno invasiva */
+footer hr {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-color: var(--nav-border);
+    opacity: 0.3;
+}
+/* 11. BOTTONE TORNA INDIETRO - Versione Alta Visibilità */
+.btn-back {
+    display: inline-block !important;
+    padding: 10px 25px !important;
+    /* Usiamo l'azzurro per il bordo invece del grigio */
+    border: 1.5px solid var(--primary) !important; 
+    border-radius: 50px !important;
+    /* Usiamo l'azzurro per il testo */
+    color: var(--primary) !important;
+    text-decoration: none !important;
+    font-size: 0.9rem !important;
+    font-weight: 700; /* Testo un po' più spesso per leggere meglio */
+    background-color: transparent;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn-back:hover {
+    /* Quando passi il mouse, il tasto si "riempie" di colore */
+    background-color: var(--primary) !important;
+    color: #ffffff !important; /* Testo bianco sul fondo azzurro */
+    box-shadow: 0 0 15px rgba(0, 168, 255, 0.4);
+    transform: translateX(-5px);
+}
+
+/* 1. Stato Normale della Copertina */
+.cover-container img {
+    /* Il tuo glow esagerato che crea l'atmosfera */
+    box-shadow: 0 0 1000px rgba(214, 51, 255, 0.7) !important;
+    
+    /* Aggiungiamo un bordo coordinato per definire l'immagine */
+    border: 2px solid var(--primary);
+    
+    /* Transizione fluida di 0.5 secondi per un effetto "respiro" */
+    transition: all 0.5s ease-in-out !important;
+}
+
+/* 2. Stato Hover (Passaggio del mouse) */
+.cover-container img:hover {
+    /* Manteniamo il glow a 1000px, ma aumentiamo leggermente l'opacità per farlo "accendere" */
+    box-shadow: 0 0 1000px rgba(214, 51, 255, 0.9) !important;
+    
+    /* Facciamo brillare di più anche il bordo */
+    border-color: #ff33a8 !important; /* Rosa acceso */
+    
+    /* Un leggerissimo ingrandimento per feedback tattile */
+    transform: scale(1.01);
+}
+/* Ingrandimento numeri Channel Insights */
+table[role="grid"] td strong {
+    font-size: 1rem;           /* Rende il numero molto grande */
+    color: var(--primary);     /* Usa il viola neon che abbiamo impostato */
+    display: block;            /* Lo mette su una riga dedicata per dargli importanza */
+    line-height: 1;
+    margin-top: 5px;
+    text-shadow: 0 0 15px rgba(214, 51, 255, 0.4); /* Un leggero glow anche sul numero */
+    transition: transform 0.3s ease;
+}
+
+/* Effetto al passaggio del mouse sulla riga della tabella */
+table[role="grid"] tr:hover td strong {
+    transform: scale(1.1);     /* Il numero si ingrandisce leggermente quando passi sulla riga */
+}
+
+/* Rende le etichette (Metrica) più leggibili accanto ai numeri grandi */
+table[role="grid"] td {
+    vertical-align: middle;
+    padding: 20px 10px;
+}
+.card-gif-container {
+    width: 100%;
+    /* Definisce una proporzione fissa (es. rettangolo 16:9) */
+    aspect-ratio: 16 / 9; 
+    overflow: hidden;
+    border-radius: 12px;
+    margin: 15px 0;
+    background: #000; /* Sfondo nero se la gif carica lentamente */
+}
+
+.card-gif-container img {
+    width: 100%;
+    height: 100%;
+    /* Fondamentale: la gif si adatta al contenitore senza deformarsi */
+    object-fit: cover; 
+    display: block;
+}
+/* Colore personalizzato per il tasto Slowed & Reverbed nella Home */
+.btn-youtube-theme {
+    color: #d633ff !important;            /* Il viola che abbiamo scelto */
+    border-color: #d633ff !important;     /* Bordo viola */
+}
+
+.btn-youtube-theme:hover {
+    background-color: #d633ff !important; /* Riempimento viola all'hover */
+    color: white !important;               /* Testo bianco all'hover */
+    box-shadow: 0 0 15px rgba(214, 51, 255, 0.4); /* Un mini-glow anche qui! */
+}
+.cta-more-projects {
+    transition: all 0.3s ease;
+}
+
+.cta-more-projects:hover {
+    background: rgba(255,255,255,0.05) !important;
+    border-style: solid !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-5px);
+}
+
+/* Stile per la card di YouTube nella pagina Progetti */
+.neon-hover-card {
+    transition: transform 0.3s ease, border-color 0.3s ease; /* Transizione fluida per movimento e colore */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordo di base quasi invisibile o standard */
+}
+
+/* Effetto al passaggio del mouse (Hover) */
+.neon-hover-card:hover {
+    transform: translateY(-10px); /* Si alza esattamente come le altre card "featured" */
+    border: 1px solid #d633ff !important; /* Tutto il bordo diventa viola neon */
+    box-shadow: none !important; /* Nessun alone, solo il bordo netto */
+}
+
+/* Assicuriamoci che il titolo resti invariato */
+.neon-hover-card:hover h2 {
+    color: white !important; /* Forza il titolo a restare bianco */
+}
+/* --- 12. OTTIMIZZAZIONE LOGO YOUTUBE --- */
+.project-image {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Logo a sinistra */
+    margin-bottom: 25px;
+}
+
+.project-image img {
+    max-width: 150px; /* Dimensione contenuta per il logo */
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+/* --- 13. RESPONSIVE PER CARD A DUE COLONNE --- */
+@media (max-width: 768px) {
+    .neon-hover-card {
+        flex-direction: column !important; /* Impila immagine sopra testo */
+        text-align: center;
+        padding: 20px !important;
+    }
+    
+    .project-image {
+        max-width: 200px; /* Più piccolo su mobile per non ingombrare */
+        margin: 0 auto 20px auto;
+    }
+
+    .neon-hover-card .card-content {
+        padding: 0 !important;
+    }
+}
+
+/* Stile specifico per la card Vibe Password */
+/* --- NUOVO STILE PULSANTE VIBE (Invertito) --- */
+
+/* Stato di BASE (Outline/Ghost) */
+.btn-vibe-color {
+    background-color: transparent !important; /* Trasparente di base */
+    color: #00ff41 !important; /* Testo verde neon */
+    border: 2px solid #00ff41 !important; /* Bordo verde neon */
+    transition: all 0.3s ease; /* Transizione fluida */
+}
+
+/* Stato HOVER (Passaggio mouse) e ACTIVE (Clic) */
+.btn-vibe-color:hover,
+.btn-vibe-color:active {
+    background-color: #00ff41 !important; /* Si riempie di verde */
+    color: #000 !important; /* Testo nero per leggibilità */
+    border-color: #00ff41 !important;
+    /* Aggiungiamo un bagliore neon per l'effetto "accensione" */
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.6) !important;
+}
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item footer {
+    padding: 15px;
+    font-size: 0.85rem;
+}
+/* Contenitore principale del carousel */
+.vibe-carousel {
+    display: flex;
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    scroll-snap-type: x mandatory; /* Effetto "calamita" sullo scorrimento */
+    gap: 20px;
+    padding-bottom: 20px;
+    -webkit-overflow-scrolling: touch; /* Fluidità su iPhone */
+}
+
+/* Nasconde la barra di scorrimento brutta su alcuni browser */
+.vibe-carousel::-webkit-scrollbar {
+    height: 6px;
+}
+.vibe-carousel::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 65, 0.3);
+    border-radius: 10px;
+}
+
+/* La singola card */
+.carousel-item {
+    flex: 0 0 280px; 
+    scroll-snap-align: center; 
+    padding: 0 !important;
+    background: #0b0b0b; /* Sfondo scuro uniforme */
+    border: 1px solid rgba(0, 255, 65, 0.15);
+    border-radius: 20px;
+    overflow: hidden !important; 
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-item .img-container {
+    height: 480px; 
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* CAMBIATO: Ora riempie tutto il riquadro eliminando le bande nere laterali */
+    display: block;
+}
+
+.carousel-item .caption {
+    padding: 20px 15px;
+    text-align: center;
+    border-top: 1px solid rgba(0, 255, 65, 0.1);
+    background: rgba(0, 0, 0, 0.4);
+    flex-grow: 1; /* Spinge la didascalia a riempire lo spazio */
+}
+
+/* Rimosso l'effetto zoom e focus che spostava le immagini */
+
+.carousel-item .caption strong {
+    color: #00ff41;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.carousel-item .caption p {
+    font-size: 0.8rem;
+    margin: 0;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* --- VARIANTE ROSA --- */
+.carousel-item.pink-theme {
+    border-color: rgba(214, 51, 255, 0.3);
+}
+.carousel-item.pink-theme .caption strong {
+    color: #d633ff !important;
+}
+
+/* Area cliccabile */
+.carousel-item .img-container a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: zoom-in;
+}
+
+@media (min-width: 992px) {
+    .vibe-carousel-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+    
+    .vibe-carousel {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 30px !important;
+    }
+
+    .carousel-item {
+        flex: none !important;
+        width: 100% !important;
+        filter: none !important;
+        transform: none !important;
+    }
+}
+/* Amplia la larghezza massima di tutta la pagina su PC */
+@media (min-width: 1200px) {
+    main.container, 
+    nav.container, 
+    footer.container {
+        max-width: 1000px !important; /* Aumentiamo il limite di PicoCSS */
+    }
+}
+/* --- INDICATORE SWIPE --- */
+.swipe-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 8px;
+}
+
+.swipe-text {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #00ff41;
+    opacity: 0.7;
+    font-weight: bold;
+}
+
+.swipe-hand {
+    animation: swipe-x 2s infinite ease-in-out;
+}
+
+/* Animazione movimento laterale */
+@keyframes swipe-x {
+    0%, 100% { transform: translateX(20px); opacity: 0.3; }
+    50% { transform: translateX(-20px); opacity: 1; }
+}
+
+/* Nascondi l'indicatore su PC perché non serve */
+@media (min-width: 992px) {
+    .swipe-indicator {
+        display: none;
+    }
+}
+/* --- TEMA VERDE PER VIBE PASSWORD --- */
+/* 1. La linea (hr) ora diventa verde neon */
+.project-green hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 65, 0.5), transparent);
+    margin: 40px 0;
+    opacity: 1;
+}
+
+/* 2. Navbar e Logo interattivi */
+.project-green nav.container {
+    position: relative; /* Necessario per posizionare la luce */
+}
+
+.project-green nav.container:hover {
+    border-bottom: 1px solid rgba(0, 255, 65, 0.8);
+}
+
+/* La luce proiettata solo sotto */
+.project-green nav.container:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -15px; /* Posizionata sotto la linea */
+    left: 0;
+    width: 100%;
+    height: 15px; /* Altezza del fascio di luce */
+    background: linear-gradient(to bottom, rgba(0, 255, 65, 0.3), transparent);
+    pointer-events: none; /* Non intralcia il mouse */
+}
+.project-green nav ul li a:hover, 
+.project-green nav ul li a:focus {
+    color: #00ff41 !important;
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+}
+
+.project-green nav ul li a.logo:hover strong {
+    color: #00ff41 !important;
+    text-shadow: 0 0 15px rgba(0, 255, 65, 1);
+}
+/* Trasforma la linea blu sotto i titoli H2 in verde neon */
+.project-green h2 {
+    border-bottom: 2px solid rgba(0, 255, 65, 0.5); /* Cambia il blu in verde */
+    padding-bottom: 0.5rem;
+    display: inline-block; /* Evita che la linea attraversi tutta la pagina se preferisci */
+}
+
+/* Se vuoi che abbia lo stesso effetto sfumato (gradiente) della linea hr: */
+.project-green h2 {
+    border-bottom: none; /* Rimuoviamo il bordo solido */
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.project-green h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #00ff41, transparent); /* Sfuma verso destra */
+}
+/* Stile per il link "Torna ai Progetti" nella pagina Vibe */
+.project-green .link-back-vibe {
+    text-decoration: none;
+    font-size: 0.9rem;
+    color: rgba(0, 255, 65, 0.6) !important; /* Verde spento di base */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+}
+
+/* Effetto Hover (quando ci passi sopra) */
+.project-green .link-back-vibe:hover {
+    color: #00ff41 !important; /* Verde neon acceso */
+    text-shadow: 0 0 10px rgba(0, 255, 65, 0.8);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    border-radius: 5px;
+    background: rgba(0, 255, 65, 0.05);
+    transform: translateX(-5px); /* Si sposta leggermente a sinistra richiamando la freccia */
+}
+/* Rimuove ombre o bande residue in fondo alla pagina */
+.project-green {
+    box-shadow: none !important; /* Elimina definitivamente il glow ai lati/fondo */
+    background-color: #0b0b0b; /* Colore solido uguale a quello delle card */
+    margin: 0;
+    padding: 0;
+}
+
+/* Assicuriamoci che il footer non abbia margini che creano buchi */
+footer.container {
+    margin-bottom: 0 !important;
+    padding-bottom: 10px; /* Mantieni solo un po' di spazio interno */
+}
+
+/* Rimuove eventuali bordi o ombre dal tag html */
+html {
+    background-color: #0b0b0b;
+}
+
+/* Base Navbar comune a tutti i progetti */
+nav.container {
+    transition: all 0.4s ease-in-out;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linea base quasi invisibile */
+}
+/* --- EFFETTO VIOLA (Slowed and Reverbed) --- */
+
+.project-purple nav.container:hover {
+    border-bottom: 1px solid rgba(157, 0, 255, 0.8) !important;
+}
+
+/* Luce proiettata solo sotto (Viola) */
+.project-purple nav.container:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -15px; /* Inizia esattamente sotto il bordo */
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(157, 0, 255, 0.3), transparent);
+    pointer-events: none;
+}
+
+.project-purple nav ul li a:hover strong,
+.project-purple nav ul li a:hover {
+    color: #9d00ff !important;
+    text-shadow: 0 0 15px rgba(157, 0, 255, 0.8);
+}
+/* --- EFFETTO BLU (Solar Vibe) --- */
+
+/* La linea che si illumina */
+.project-blue nav.container:hover {
+    border-bottom: 1px solid rgba(0, 162, 255, 0.8) !important;
+}
+
+/* Il fascio di luce sotto la linea */
+.project-blue nav.container:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(0, 162, 255, 0.4), transparent);
+    pointer-events: none;
+}
+
+/* Il glow sui testi (Logo e Link) */
+.project-blue nav ul li a:hover strong,
+.project-blue nav ul li a:hover {
+    color: #00a2ff !important;
+    /* Questo crea l'effetto lampadina accesa */
+    text-shadow: 0 0 10px rgba(0, 162, 255, 0.8), 0 0 20px rgba(0, 162, 255, 0.4) !important;
+}
+/* --- VARIANTE BLU PER CAROUSEL (Vibe Solar) --- */
+.carousel-item.blue-theme {
+    border-color: rgba(0, 162, 255, 0.2); /* Bordo blu tenue */
+}
+
+.carousel-item.blue-theme .caption strong {
+    color: #00a2ff !important; /* Testo forte in blu elettrico */
+    text-shadow: 0 0 10px rgba(0, 162, 255, 0.3);
+}
+
+.carousel-item.blue-theme:hover {
+    border-color: rgba(0, 162, 255, 0.6);
+    box-shadow: 0 0 20px rgba(0, 162, 255, 0.1);
+}
+
+/* Adattiamo l'indicatore swipe al blu se siamo in questa pagina */
+.project-blue .swipe-text {
+    color: #00a2ff;
+}
+/* Rimuove il contenitore blu/grigio intorno al progetto Solar Vibe */
+.project-blue article {
+    background-color: transparent !important; /* Toglie lo sfondo scuro */
+    border: none !important;                 /* Toglie il bordo blu/grigio */
+    box-shadow: none !important;             /* Toglie eventuali ombre */
+    padding: 0 !important;                   /* Elimina lo spazio interno superfluo */
+}
+
+/* Opzionale: se vuoi che il testo non sia troppo appiccicato ai bordi dello schermo */
+.project-blue main.container {
+    padding-top: 20px;
+}
+/* Rimuove lo sfondo e i bordi da tutto l'articolo e dal suo header */
+.project-blue article, 
+.project-blue article header {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Rimuove la linea di separazione interna che PicoCSS mette tra header e contenuto */
+.project-blue article header {
+    margin-bottom: 40px;
+    border-bottom: none !important;
+}
+/* Cambia la barra di scorrimento del carousel in blu */
+.project-blue .vibe-carousel::-webkit-scrollbar-thumb {
+    background: rgba(0, 162, 255, 0.5) !important; /* Blu Solar */
+    border-radius: 10px;
+}
+
+/* Colore di base della traccia (opzionale, per pulizia) */
+.project-blue .vibe-carousel::-webkit-scrollbar {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.05);
+}
+/* --- TEMA BLU PER SEZIONE TITOLO "ESPLORA" (Vibe Solar) --- */
+
+/* 1. Il Titolo Grande */
+.vibe-section-title {
+    color: #f5f5f5 !important; /* Bianco per massima leggibilità */
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: -1.5px;
+}
+
+/* 2. Il Contenitore del Testo e Icona sotto */
+.swipe-indicator-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* 3. Il Testo "Trascina" (Verde di base, ora BLU) */
+/* Titolo Centrale con Linea Sfumata Blu */
+.vibe-title-blue {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+    border: none; /* Rimuove bordi standard */
+}
+
+/* La linea particolare sfumata */
+.vibe-title-blue::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 25%; /* Centra la linea rispetto al testo */
+    width: 50%; /* La linea è più corta del testo per stile */
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00a2ff, transparent);
+}
+.project-blue .swipe-text {
+    color: #00a2ff; /* Blu Solar */
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* 4. L'Icona SVG (Blu) */
+.project-blue .swipe-hand {
+    color: #00a2ff; /* Blu Solar */
+    stroke: #00a2ff; /* Colore del bordo dell'SVG */
+    animation: swipe-hand-x 1.8s infinite ease-in-out;
+}
+
+/* Nasconde l'indicatore su PC e Desktop grandi (se non l'hai già fatto) */
+@media (min-width: 992px) {
+    .vibe-section-title {
+        font-size: 2.8rem;
+    }
+    
+    .swipe-indicator-container {
+        display: none !important;
+    }
+}
+
+/* 5. L'ANIMAZIONE DI TRASCINAMENTO (SE NON LA TROVI GIÀ NEL FILE) */
+@keyframes swipe-hand-x {
+    0%, 100% {
+        transform: translateX(15px);
+        opacity: 0.4;
+    }
+    50% {
+        transform: translateX(-15px);
+        opacity: 1;
+    }
+}
+
+/* Ingrandimento del sottotitolo nella Hero */
+.hero-subtitle {
+    font-size: 1.4rem !important; /* Aumenta la dimensione del font */
+    line-height: 1.5;            /* Migliora la leggibilità su più righe */
+    max-width: 500px;            /* Evita che la riga diventi troppo lunga su PC */
+    margin: 15px auto 30px auto; /* Lo centra e gli dà respiro */
+    color: #a0a0a0;              /* Grigio chiaro per non sparare troppo rispetto al titolo */
+    font-weight: 400;
+}
+
+/* Ottimizzazione per schermi grandi (PC) */
+@media (min-width: 992px) {
+    .hero-subtitle {
+        font-size: 2rem !important;
+         max-width: 1000px; 
+    }
+}
+/* Effetto evidenza per la parola chiave */
+.highlight-blue {
+    color: #00a2ff;           /* Il tuo blu elettrico */
+    font-weight: 700;         /* Più spessa */
+    font-style: italic;       /* Corsivo per dare dinamismo */
+    position: relative;
+    padding: 0 4px;
+    /* Un leggero bagliore testuale per farla "accendere" */
+    text-shadow: 0 0 10px rgba(0, 162, 255, 0.4); 
+}
+
+/* Opzionale: un leggerissimo underline sfumato solo sotto la parola */
+.highlight-blue::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 162, 255, 0.8), transparent);
+}
+
+/* Rimuove definitivamente lo sfondo e i bordi dal footer blu */
+.project-blue footer, 
+.project-blue footer.container {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding-top: 20px !important;
+}
+/* Centra la firma e riduce lo spazio */
+.footer-signature, 
+footer p {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+/* Riduce lo spazio finale in fondo a tutte le pagine */
+footer, 
+.universal-footer, 
+footer.container {
+    padding-top: 20px !important;    /* Spazio sopra il tasto */
+    padding-bottom: 10px !important; /* Spazio minimo sotto il nome */
+    margin-bottom: 0 !important;
+}
+
+/* Centra e compatta la firma */
+footer p, 
+.signature {
+    margin-top: 10px !important;
+    margin-bottom: 0 !important;
+    text-align: center;
+    width: 100%;
+}
+/* --- FOOTER VIBE PASSWORD --- */
+.footer-vibe {
+    text-align: center;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background: transparent !important;
+}
+
+/* Colore Verde per i link Social */
+.footer-social {
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+.footer-social a {
+    color: #00ff41 !important; /* Il verde neon delle tue card */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.footer-social a:hover {
+    opacity: 0.7;
+    text-shadow: 0 0 8px rgba(0, 255, 65, 0.5);
+}
+
+/* --- COMPATTAZIONE FOOTER --- */
+.footer-nav {
+    margin-bottom: 5px !important; /* Era 20px, ora quasi nullo */
+}
+
+/* --- FIX LOGO VIBE SOLAR TONDO --- */
+
+/* Contenitore che si allinea al testo della card */
+.project-image-solar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px; /* Evita che diventi troppo piccolo su schermi medi */
+}
+
+/* La cornice tonda */
+.circular-frame-solar {
+    width: 250px;           /* Dimensione su PC */
+    height: 250px;
+    border-radius: 50%;     /* Lo rende tondo */
+    overflow: hidden;       /* Taglia i bordi dell'immagine */
+    border: 2px solid rgba(0, 162, 255, 0.3); /* Bordo blu coordinato */
+    box-shadow: 0 0 20px rgba(0, 162, 255, 0.1); /* Leggero bagliore */
+    transition: all 0.4s ease;
+}
+
+.circular-frame-solar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      /* Riempie il cerchio perfettamente */
+}
+
+/* Effetto al passaggio del mouse sulla card */
+.project-card:hover .circular-frame-solar {
+    border-color: #00a2ff;
+    box-shadow: 0 0 30px rgba(0, 162, 255, 0.3);
+    transform: scale(1.02);
+}
+
+/* --- ADATTAMENTO MOBILE --- */
+@media (max-width: 768px) {
+    .project-image-solar {
+        margin-bottom: 20px;
+        min-width: 100%;
+    }
+    
+    .circular-frame-solar {
+        width: 180px; /* Più piccolo su smartphone */
+        height: 180px;
+    }
+}
+
+/* Forza il blu solo sulla card Vibe Solar */
+.vibe-solar-card:hover {
+    border-color: #00a2ff !important;
+    box-shadow: 0 0 30px rgba(0, 162, 255, 0.4) !important;
+}
+
+/* Mantiene il viola su tutte le altre neon-hover-card (come YouTube) */
+.neon-hover-card:not(.vibe-solar-card):hover {
+    border-color: #d633ff !important;
+    box-shadow: 0 0 30px rgba(214, 51, 255, 0.4) !important;
+}
+/* --- FIX ILLUMINAZIONE VERDE --- */
+
+/* Forza il colore verde ed elimina ogni traccia di viola su questa card */
+.neon-hover-card.vibe-password-card:hover {
+    border-color: #00ff41 !important;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.5) !important;
+}
+
+/* 1. L'hover sulla card accende SOLO la card (VERDE) */
+.vibe-password-card:hover {
+    border-color: #00ff41 !important;
+    box-shadow: 0 0 30px rgba(0, 255, 65, 0.4) !important;
+}
+
+/* 2. Reset del tasto quando passi sulla card: deve rimanere trasparente con bordo verde */
+.vibe-password-card:hover .btn-vibe-color {
+    background: transparent !important;
+    color: #00ff41 !important;
+    box-shadow: none !important;
+    border: 1px solid #00ff41 !important;
+}
+
+/* 3. Il tasto si illumina (diventa pieno) SOLO quando il mouse tocca il tasto stesso */
+.btn-vibe-color:hover {
+    background: #00ff41 !important;
+    color: #000000 !important; /* Testo nero per leggibilità sul verde */
+    box-shadow: 0 0 15px rgba(0, 255, 65, 0.6) !important;
+}
+
+/* --- FIX OVERFLOW E NAV BAR MOBILE --- */
+
+/* 1. Blocca lo scorrimento laterale a livello globale */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Taglia tutto ciò che esce a destra */
+    position: relative;
+}
+
+/* 2. Assicura che ogni elemento calcoli correttamente la sua larghezza */
+* {
+    box-sizing: border-box;
+}
+
+/* 3. Fix specifico per la Nav Bar su Mobile */
+@media (max-width: 768px) {
+    nav.container {
+        padding: 15px 10px !important; /* Riduciamo il padding per guadagnare spazio */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row; /* Li teniamo sulla stessa riga */
+        justify-content: space-between; /* Il logo a sinistra, i link a destra */
+        align-items: center;
+        width: 100%;
+        gap: 5px; /* Spazio minimo tra gli elementi */
+    }
+
+    /* Gestione dei Link */
+    nav a {
+        margin-left: 10px !important; /* Margine ridotto rispetto ai 20px originali */
+        font-size: 0.85rem; /* Testo leggermente più piccolo per farlo stare in riga */
+        white-space: nowrap; /* Impedisce al testo di andare a capo */
+    }
+
+    .logo {
+        font-size: 1.5rem !important; /* Logo più piccolo per lasciare spazio ai link */
+        letter-spacing: -1px;
+        margin-left: 0 !important;
+    }
+
+    /* Fix per il contenitore principale */
+    .container {
+        width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        overflow-x: hidden;
+    }
+
+    /* Fix per le griglie che potrebbero forzare la larghezza */
+    .projects-grid, .contact-grid, .vibe-carousel {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* --- CENTRAGGIO VIBE SOLAR MOBILE --- */
+@media (max-width: 768px) {
+    /* Centra il contenitore della card e il suo contenuto */
+    .vibe-solar-card, 
+    .neon-hover-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra orizzontalmente tutti i figli */
+        text-align: center;  /* Centra il testo all'interno */
+        padding: 30px 20px !important;
+    }
+
+    /* Centra l'immagine/logo tondo */
+    .project-image-solar,
+    .circular-frame-solar {
+        margin: 0 auto 20px auto !important; /* Forza il centraggio orizzontale */
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Assicura che la descrizione non sia troppo larga e sia centrata */
+    .vibe-solar-card p,
+    .neon-hover-card p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 100%;
+    }
+
+    /* Centra il pulsante "Approfondisci" */
+    .btn-contact, 
+    .btn-vibe-color {
+        display: inline-block;
+        margin: 20px auto 0 auto !important;
+        width: fit-content; /* Impedisce al bottone di allargarsi troppo */
+    }
+}
+/* --- ALLINEAMENTO ELEMENTI SPECIFICI CARD --- */
+@media (max-width: 768px) {
+    
+    /* 1. Centra il Tag/Badge */
+    .tag {
+        display: inline-block;
+        margin: 0 auto 15px auto !important; /* Centra orizzontalmente e dà spazio sotto */
+        float: none; /* Rimuove eventuali float che spostano il tag */
+    }
+
+    /* 2. Centra il Pulsante Approfondisci */
+    /* Usiamo il selettore specifico per i pulsanti nelle card */
+    .project-card .btn-contact, 
+    .project-card .btn-vibe-color,
+    .project-card a.btn-contact {
+        display: table !important; /* Metodo infallibile per centrare link come blocchi */
+        margin: 25px auto 0 auto !important;
+        text-align: center;
+    }
+
+    /* 3. Forza il contenitore della card a gestire tutto al centro */
+    .project-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+}
+
+/* --- RESET & TRANSITION --- */
+.project-card {
+    transition: all 0.4s ease !important; /* Per un movimento fluido */
+}
+
+/* --- 1. VIBE SOLAR (BLU) --- */
+/* Usiamo .featured ma escludiamo le altre per sicurezza */
+.project-card.featured:not(.neon-card):not(.vibe-card):hover {
+    transform: translateY(-5px);
+    border-color: #00a8ff !important;
+    box-shadow: 0 10px 30px rgba(0, 168, 255, 0.4) !important;
+}
+
+/* --- 2. SLOWED & REVERBED (VIOLA) --- */
+/* Qui puntiamo alla classe neon-card */
+.project-card.neon-card:hover {
+    transform: translateY(-5px);
+    border-color: #d633ff !important;
+    box-shadow: 0 10px 30px rgba(214, 51, 255, 0.4) !important;
+}
+
+/* --- 3. VIBE PASSWORD (VERDE) --- */
+/* Qui puntiamo alla classe vibe-card */
+.project-card.vibe-card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff41 !important;
+    box-shadow: 0 10px 30px rgba(0, 255, 65, 0.4) !important;
+}
