@@ -1,6 +1,7 @@
 # 🚀 Alexandru Chiscop | Personal Portfolio
 
-Benvenuti nel repository del mio portfolio personale. Questo spazio nasce dall'esigenza di documentare il mio percorso, raccogliere le mie idee e rendere tangibili i miei progetti in ambito Energy, Tech e Sound Design.
+Il limite più grande di un CV è la sua "freddezza" intrinseca: alla fine rimane un pezzo di carta, comunica solo certe cose ed entro determinati limiti.
+Questo è stato il punto di partenza per la creazione di questa repository, che di fatto funge da portfolio personale. Questo spazio nasce dall'esigenza di documentare e illustrare il mio percorso, raccogliere le mie idee e rendere tangibili i miei progetti (che siano personali, lavorativi, esercizi vari o anche delle idee fantasiose.
 
 🌐 **Live Demo:** [https://alexandruchiscop.github.io/alexandruchiscop/index.html] - è ancora Work In Progress ... :)
 
@@ -9,31 +10,15 @@ Benvenuti nel repository del mio portfolio personale. Questo spazio nasce dall'e
 
 ## 🧠 Sviluppo & Filosofia (AI-Assisted Workflow)
 
-Questo progetto è il risultato di un processo di **sviluppo assistito da Intelligenza Artificiale**. 
+Questo progetto (e parte dei suoi sottoinsiemi) è il risultato di un processo di **sviluppo assistito da Intelligenza Artificiale**. 
 
 Ho scelto di utilizzare l'IA come "copilota" per:
-* **Problem Solving:** Risolvere bug strutturali (come il refactoring del layout responsive).
-* **Apprendimento:** Comprendere a fondo le logiche dei framework minimalisti (PicoCSS) e le proprietà avanzate di Flexbox/Grid.
-* **Iterazione Rapida:** Testare diverse varianti estetiche (glow effects, neon design) in tempi brevi.
+* **Problem Solving:** Brainstormare idee e risolvere ciò che non tornava (e/o migliorare, fine tuning si chiamava no?
+* **Apprendimento:** Aiutarmi ad imparare e capire tutto il mondo della programmazione e dell'Intelligenza Artificiale. Alla fine il modo migliore per imparare ogni cosa è immergersi completamente nell'esperienza, no?
+* **I(n)terazione Rapida:** Testare diverse situazioni, dalle funzionalità logiche fino all'aspetto estetico in tempi brevi relativamente "brevi".
 
-**Nota di Trasparenza:** Sebbene l'IA abbia fornito suggerimenti e snippet di codice, ogni singola riga è stata analizzata, testata e integrata manualmente da me. Ho curato personalmente l'architettura delle informazioni, il design visuale e la logica di navigazione, assicurandomi che il risultato finale rifletta la mia visione personale.
-
----
-
-## 🛠️ Tecnologie Utilizzate
-
-* **PicoCSS:** Framework CSS semantico per una base leggera e pulita.
-* **HTML5 & CSS3:** Utilizzo intensivo di variabili CSS per temi dinamici e animazioni custom.
-* **JavaScript (Vanilla):** Sistema di gestione del tema (Dark/Light mode) con persistenza via `localStorage`.
-* **Ottimizzazione WebP:** Per un caricamento fluido e alte performance su dispositivi mobili.
-
----
-
-## ✨ Caratteristiche Principali
-
-* **Dynamic Hover Glow:** Ogni categoria di progetto ha un'identità visiva unica con bagliori neon coordinati (Blu per Energy 🔵, Viola per Music 🟣, Verde per Cyber Security 🟢).
-* **Responsive Layout:** Navigazione ottimizzata per ogni tipo di schermo, con particolare attenzione all'usabilità mobile.
-* **Brand Identity:** Design ispirato al mondo tech, con focus sulla leggibilità e sull'impatto visivo delle "card".
+**Nota di Trasparenza:** Sebbene l'IA abbia fornito suggerimenti e pezzi di codice, ogni singola riga è stata analizzata, testata e integrata manualmente da me. Ho curato personalmente l'architettura delle informazioni, il design visuale e la logica di navigazione, assicurandomi che il risultato finale rifletta la mia visione personale.
+Insomma, non gli ho detto "fammi che incollo", ma "cerchiamo di capire come potremmo fare questo".
 
 ---
 
