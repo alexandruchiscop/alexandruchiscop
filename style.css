@@ -1361,3 +1361,13 @@ html, body {
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.8) !important;
     transform: translateY(-3px) !important;
 }
+
+/* --- Centratura titoli solo su Mobile --- */
+@media (max-width: 768px) {
+    .card-content h2 {
+        display: table !important; /* Permette ai margini auto di funzionare bene col bordo sotto */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+}
