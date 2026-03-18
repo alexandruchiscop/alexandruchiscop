@@ -862,6 +862,26 @@ h1 {
     
     .hero-subtitle { font-size: 2rem !important; max-width: 1000px; }
 }
+@media (max-width: 768px) {
+    /* Trova il contenitore che tiene le due colonne (es. un div o section) */
+    .grid-problema-soluzione { 
+        display: flex !important;
+        flex-direction: column !important; /* Forza la disposizione verticale */
+        gap: 40px !important; /* Distanzia le due sezioni tra loro */
+        text-align: center !important;
+    }
+
+    .grid-problema-soluzione div {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Riduciamo leggermente i titoli per farli stare su una riga */
+    .grid-problema-soluzione h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 15px !important;
+    }
+}
 /* #endregion */
 /* #region 9. FOOTER UNIVERSALE DINAMICO */
 
