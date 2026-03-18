@@ -8,31 +8,36 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <style>
-        :root {
-            --primary: #d633ff;
-            --accent-pink: #ff33a8;
-        }
-        .tag {
-            background: rgba(214, 51, 255, 0.1);
-            color: var(--primary);
-        }
-        .project-card:hover, .gallery-img:hover {
-            border-color: var(--primary) !important;
-            box-shadow: 0 10px 30px rgba(214, 51, 255, 0.2);
-        }
-        .btn-back {
-            border-color: var(--primary) !important;
-            color: var(--primary) !important;
-        }
-        .btn-back:hover {
-            background-color: var(--primary) !important;
-            color: white !important;
-        }
-        nav.container {
-            position: relative;
-            z-index: 100;
-        }
-    </style>
+    /* 1. Rende il titolo H1 viola neon */
+    h1 {
+        color: var(--primary) !important;
+        text-shadow: 0 0 20px rgba(214, 51, 255, 0.5);
+         text-shadow: 
+            0 0 10px rgba(214, 51, 255, 0.5),
+            0 0 25px rgba(214, 51, 255, 0.5),
+            0 0 50px rgba(214, 51, 255, 0.5) !important;
+        letter-spacing: -1px;
+    }
+
+    /* 2. Glow viola fisso sulla copertina */
+    .cover-container img {
+        box-shadow: 0 0 800px rgba(214, 51, 255, 0.6) !important;
+        border: 2px solid #d633ff !important;
+    }
+
+    /* 3. Colore viola per le scritte delle tabelle */
+    table strong {
+        color: #d633ff;
+    }
+
+    /* 4. Glow sulle card interne alla pagina */
+    .project-card {
+        border-color: rgba(214, 51, 255, 0.2) !important;
+    }
+    .project-card:hover {
+        box-shadow: 0 0 30px rgba(214, 51, 255, 0.3) !important;
+    }
+</style>
 </head>
 <body class="project-purple">
 
@@ -53,11 +58,9 @@
             <p class="hero-subtitle">Una rivisitazione dei miei brani preferiti in chiave "Slowed and Reverbed".</p>
         </header>
 
-        <section>
-            <div class="cover-container">
-                <img src="S&R Copertina Youtube.png" alt="YouTube Cover" class="gallery-img" style="width: 100%; height: auto; border-radius: 20px;">
-            </div>
-        </section>
+        <div class="cover-container">
+    <img src="S&R Copertina Youtube.png" alt="YouTube Cover" style="width: 100%; border-radius: 20px;">
+</div>
 
         <section style="margin-top: 50px;">
             <h3>Channel Insights</h3>
@@ -98,15 +101,18 @@
             </article>
         </div>
 
-        <section style="margin-top: 60px;">
-            <h3 style="text-align: center;">L'ultima canzone aggiunta:</h3>
-            <div class="youtube-container" style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-                <iframe width="100%" height="450"
-                    src="https://www.youtube.com/embed?listType=playlist&list=PLyrZqgPrpMwNkNEJm7IKS1KAnetjEFV27"
-                    frameborder="0" allowfullscreen>
-                </iframe>
-            </div>
-        </section>
+       <section style="margin-top: 60px;">
+    <h3 style="text-align: center;">L'ultima canzone aggiunta:</h3>
+    <div class="youtube-container" style="border-radius: 20px; overflow: hidden; box-shadow: 0 0 40px rgba(214, 51, 255, 0.4); position: relative; padding-bottom: 56.25%; height: 0; background: #000; border: 2px solid #d633ff;">
+        <iframe 
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+            src="https://www.youtube.com/embed/N_Zp_I9X7uU?playlist=N_Zp_I9X7uU&list=PLyrZqgPrpMwNkNEJm7IKS1KAnetjEFV27&autoplay=0&rel=0" 
+            title="Slowed & Reverbed Player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
 
         <section style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
             <a href="https://www.youtube.com/@SlowedAndReverbed789" target="_blank" class="btn-contact" style="background-color: #ff0000; border-color: #ff0000; color: white !important;">
@@ -114,15 +120,18 @@
             </a>
         </section>
 
-        <footer>
-            <a href="progetti.html" class="btn-back">← Torna a tutti i progetti</a>
-            <hr>
-            <div style="margin-bottom: 20px;">
-                <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank" style="margin-right: 15px; text-decoration: none;">LinkedIn</a>
-                <a href="mailto:chiscopalexandru97@gmail.com" style="text-decoration: none;">Email</a>
-            </div>
-            <p>© 2026 Alexandru Chiscop</p>
-        </footer>
+       <footer>
+    <a href="index.html" class="link-back-vibe">← Torna a tutti i progetti</a>
+
+    <hr>
+
+    <div class="footer-social">
+        <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
+        <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
+    </div>
+
+    <p class="signature">© 2026 Alexandru Chiscop</p>
+</footer>
     </main>
 
     <script>

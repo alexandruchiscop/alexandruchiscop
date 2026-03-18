@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it" data-theme="dark">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+<link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business BEP Manager | Case Study</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <style>
+        h1 {
+        color: #ffd700 !important; /* Giallo BEP saturo */
+        /* Triplo strato di ombra per un effetto oro neon */
+        text-shadow: 
+            0 0 10px rgba(255, 215, 0, 0.8),
+            0 0 25px rgba(255, 215, 0, 0.5),
+            0 0 50px rgba(255, 215, 0, 0.3) !important;
+        letter-spacing: -1px;
+    }
+
+    .highlight-yellow {
+        color: #ffd700;
+        font-weight: 800;
+        /* Bagliore per il testo evidenziato */
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    }
+
+    /* Coerenza per i tag della pagina BEP */
+    .tag {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.2) !important;
+        border-color: rgba(255, 215, 0, 0.6) !important;
+        color: #ffd700 !important;
+    }
+        /* STILE PULSANTE FINALE GIALLO */
+        .btn-back-yellow {
+            display: inline-block;
+            padding: 10px 25px;
+            color: #ffd700;
+            border: 1px solid #ffd700;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .btn-back-yellow:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateX(-5px);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body class="project-yellow">    
+    <nav class="container">
+        <ul>
+            <li><a href="index.html" class="logo"><strong>AC</strong></a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+            <header style="text-align: center; margin-bottom: 50px; display: flex; flex-direction: column; align-items: center;">
+                <span class="tag" style="color: #ffd700; border: 1px solid #ffd700; background: rgba(255, 215, 0, 0.1); display: block; margin-bottom: 15px; width: fit-content; padding: 5px 15px;">
+                    Business Strategy & Finance
+                </span>
+                <h1 style="margin: 0; display: inline-block; padding-bottom: 5px;">
+                    Business BEP Analysis
+                
+                </h1>
+                <p class="hero-subtitle" style="margin-top: 20px;">
+                    Calcolare il <span style="color: #ffd700; font-weight: bold;">Break Even Point</span> per il tuo business non è mai stato così rapido.
+                </p>
+            </header>
+
+             <div class="grid" style="margin-top: 60px; gap: 40px; display: grid; grid-template-columns: 1fr 1fr;">
+    <div style="text-align: center;">
+        <h2 style="color: var(--project-accent);">Il Problema</h2>
+        <p>Molte piccole imprese faticano a individuare il reale punto di pareggio, specialmente gestendo un mix di prodotti con margini differenti.</p>
+    </div>
+    <div style="text-align: center;">
+        <h2 style="color: var(--project-accent);">La Soluzione</h2>
+        <p>Il BEP Analysis centralizza il calcolo dei costi e ricavi, offrendo una simulazione immediata del Sales Mix.</p>
+    </div>
+</div>
+<div style="margin: 60px 0; text-align: center; padding: 40px; border-top: 1px solid rgba(255, 215, 0, 0.1); border-bottom: 1px solid rgba(255, 215, 0, 0.1);">
+    <blockquote style="border: none; margin: 0; padding: 0;">
+        <p style="font-size: 1.4rem; font-style: italic; color: #e2e8f0; line-height: 1.6;">
+            "Semplificare la complessità finanziaria significa permettere a chiunque di guidare la propria impresa con i dati, non con l'intuizione."
+        </p>
+        <cite style="color: #ffd700; font-weight: bold; font-style: normal; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">
+            — Qualcuno
+        </cite>
+    </blockquote>
+</div>
+           
+<section style="margin-top: 40px; --primary: #ffd700; --primary-hover: #ffecb3;">
+    
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="color: #ffd700 !important; margin-bottom: 10px;">Architettura Funzionale</h2>
+    </div>
+
+    <div class="grid">
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #ffd700 !important; border-bottom: 2px solid #ffd700 !important; padding-bottom: 8px; display: block; width: 100%;">
+                01. Analisi dei Costi
+            </h4>
+            <p style="font-size: 0.95rem; margin-top: 15px;">
+                Mappatura dettagliata dei <strong>Costi Fissi</strong> e <strong>Variabili</strong>. Il sistema isola il margine di contribuzione per definire la profittabilità di base del modello di business.
+            </p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #ffd700 !important; border-bottom: 2px solid #ffd700 !important; padding-bottom: 8px; display: block; width: 100%;">
+                02. Sales Mix Dinamico
+            </h4>
+            <p style="font-size: 0.95rem; margin-top: 15px;">
+                Simulazione di scenari <strong>Multi-prodotto</strong>. L'algoritmo bilancia i pesi ponderati delle vendite, ricalcolando il BEP globale istantaneamente al variare degli input.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid" style="margin-top: 20px;">
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #ffd700 !important; border-bottom: 2px solid #ffd700 !important; padding-bottom: 8px; display: block; width: 100%;">
+                03. Data Visualization
+            </h4>
+            <p style="font-size: 0.95rem; margin-top: 15px;">
+                Proiezione cartesiana tramite <strong>Chart.js</strong>. Identificazione visiva immediata dell'area di perdita e profitto, rendendo i dati economico-finanziari intuitivi per chiunque.
+            </p>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <h4 style="color: #ffd700 !important; border-bottom: 2px solid #ffd700 !important; padding-bottom: 8px; display: block; width: 100%;">
+                04. Report Strategico
+            </h4>
+            <p style="font-size: 0.95rem; margin-top: 15px;">
+                Generazione di <strong>PDF professionali</strong> via <code>jspdf</code>. Esportazione di tabelle di sensibilità e grafici ad alta risoluzione per presentazioni corporate.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+</hr>
+
+<footer style="text-align: center; margin: 10px 0;">
+    <p style="font-size: 2rem; font-style: italic; color: #e2e8f0; max-width: 990px; margin: 20 auto;">
+        "La chiarezza visiva del punto di pareggio trasforma i dati grezzi in decisioni aziendali consapevoli."
+    </p>
+    <small style="color: #ffd700; font-weight: bold; text-transform: uppercase;">— Qualcun altro</small>
+</footer>
+
+<hr>
+
+ <section style="text-align: center; margin: 80px 0; padding: 60px 20px; border: 1px dashed rgba(255, 215, 0, 0.3); border-radius: 12px; background: rgba(255, 215, 0, 0.02);">
+        <p style="color: #ffd700; font-style: italic; font-size: 2.5rem; margin: 0; font-weight: 300; letter-spacing: 2px;">
+            [ 🔨 🧰 In arrivo... 🧰 🔨 ]
+        </p> 
+    </section> <div style="text-align: center; margin: 50px 0;">
+        <h3 style="margin-bottom: 25px; font-size: 1.2rem; letter-spacing: 1px; text-transform: uppercase; color: #e2e8f0;">
+            Pronto a ottimizzare i tuoi margini?
+        </h3>
+        <a href="https://alexandruchiscop.github.io/Vibe-BEP/" target="_blank" class="btn-back-yellow" style="border-radius: 50px;">
+            Vuoi provare l'app? →
+        </a>
+    </div>
+
+    <footer class="footer-vibe">
+        <a href="index.html" class="link-back-vibe">← Torna a tutti i progetti</a>
+        <hr>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
+            <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
+        </div>
+        <p class="signature">© 2026 Alexandru Chiscop</p>
+    </footer>     
+    </main>
+</body>
+</html>
