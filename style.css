@@ -882,6 +882,31 @@ h1 {
         margin-bottom: 15px !important;
     }
 }
+/* FIX SPECIFICO PER VIBE SOLAR MOBILE */
+@media (max-width: 768px) {
+    /* Forza le colonne a mettersi una sopra l'altra */
+    .section-problema-soluzione {
+        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* Evita che Fancybox o il Carousel creino scroll orizzontale */
+    .vibe-carousel-container {
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+    /* Ridimensiona i titoli che 'spingono' fuori il layout */
+    h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+}
 /* #endregion */
 /* #region 9. FOOTER UNIVERSALE DINAMICO */
 
