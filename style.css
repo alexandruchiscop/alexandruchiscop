@@ -671,7 +671,24 @@ h1 {
     0%, 100% { transform: translateX(0); }
     50% { transform: translateX(20px); }
 }
+/* Fix per evitare le barre azzurre/glitch su Vibe Solar Mobile */
+@media (max-width: 768px) {
+    .vibe-carousel-container {
+        overflow: hidden !important; /* Impedisce al browser di creare scroll extra */
+        -webkit-overflow-scrolling: touch;
+    }
 
+    .carousel-item img {
+        height: auto !important;
+        max-height: 250px; /* Evita che l'immagine occupi troppo spazio verticale */
+        object-fit: contain !important;
+    }
+
+    /* Rimuove eventuali ombre eccessive che causano lag su Safari mobile */
+    .cover-container img {
+        box-shadow: 0 0 20px var(--project-accent) !important;
+    }
+}
 /* #endregion *//* #endregion */
 /* #region 6. TEMI DI PAGINA */
 
