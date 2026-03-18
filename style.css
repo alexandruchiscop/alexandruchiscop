@@ -788,6 +788,18 @@ h1 {
     nav ul { gap: 5px; }
     nav a { margin-left: 10px !important; font-size: 0.85rem; white-space: nowrap; }
     .logo { font-size: 1.5rem !important; }
+    nav ul {
+        gap: 0 !important;
+    }
+
+    nav ul li {
+        margin-left: 10px !important; /* Riduce lo spazio tra Home, Progetti, Contatti */
+    }
+
+    nav a {
+        font-size: 0.8rem !important;
+    }
+}
 
     .project-card {
         align-items: center !important;
