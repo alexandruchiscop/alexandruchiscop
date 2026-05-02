@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alexandruchiscop.github.io/alexandruchiscop/sitemap.xml

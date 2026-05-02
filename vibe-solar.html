@@ -3,148 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibe Solar | Flagship Project</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-<link rel="stylesheet" href="css/style.css">    
-<link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
-<style>
-    h1 {
-        color: #00a8ff !important; /* Blu più saturo direttamente */
-        /* Triplo strato di ombra: uno stretto per definire, uno medio per il colore, uno largo per l'alone */
-        text-shadow: 
-            0 0 10px rgba(0, 168, 255, 0.8),
-            0 0 25px rgba(0, 168, 255, 0.5),
-            0 0 50px rgba(0, 168, 255, 0.3) !important;
-        letter-spacing: -1px;
-    }
-
-    .highlight-blue {
-        color: #00a8ff;
-        font-weight: 800;
-        /* Anche il testo evidenziato riceve un leggero bagliore */
-        text-shadow: 0 0 10px rgba(0, 168, 255, 0.4);
-    }
-
-    /* Opzionale: Aumenta il bagliore dei tag per coerenza */
-    .tag {
-        box-shadow: 0 0 15px rgba(0, 168, 255, 0.2) !important;
-        border-color: rgba(0, 168, 255, 0.6) !important;
-    }
-</style>
+    <title>Vibe Solar 3.0 | Monitoraggio energetico per camper e off-grid</title>
+    <meta name="description" content="Vibe Solar è un'app web per prevedere la produzione energetica in mobilità. Ideale per camperisti e vanlifers. Dati meteo, geolocalizzazione, report.">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <style>
+        h1 {
+            color: #00a8ff !important;
+            text-shadow: 
+                0 0 10px rgba(0, 168, 255, 0.8),
+                0 0 25px rgba(0, 168, 255, 0.5),
+                0 0 50px rgba(0, 168, 255, 0.3) !important;
+            letter-spacing: -1px;
+        }
+        .highlight-blue {
+            color: #00a8ff;
+            font-weight: 800;
+            text-shadow: 0 0 10px rgba(0, 168, 255, 0.4);
+        }
+        .tag {
+            box-shadow: 0 0 15px rgba(0, 168, 255, 0.2) !important;
+            border-color: rgba(0, 168, 255, 0.6) !important;
+        }
+    </style>
 </head>
 <body class="project-blue">
 
- <nav class="container">
-    <ul>
-        <li><a href="index.html" class="logo"><strong>AC</strong></a></li>
-    </ul>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="progetti.html">Progetti</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
-    </ul>
-</nav>
+    <nav class="container">
+        <ul>
+            <li><a href="index.html" class="logo"><strong>AC</strong></a></li>
+        </ul>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="progetti.html">Progetti</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
 
     <main class="container">
         <header style="text-align: center; margin-bottom: 60px;">
             <span class="tag" style="color: #00a2ff; border: 1px solid #00a2ff; background: rgba(0, 162, 255, 0.1);">Flagship Project</span>
-            <h1 style="margin-top: 10px;">Vibe Solar</h1>
+            <h1 style="margin-top: 10px;">Vibe Solar 3.0</h1>
             <p class="hero-subtitle">Monitorare l'indipendenza energetica in movimento non è mai stato così <span class="highlight-blue">semplice</span>.</p>
         </header>
 
+        <!-- Griglia Problema / Soluzione -->
         <div class="grid" style="margin-top: 60px; gap: 40px; display: grid; grid-template-columns: 1fr 1fr;">
-    <div style="text-align: center;">
-        <h2 style="color: var(--project-accent);">Il Problema</h2>
-        <p>Chi vive o viaggia in Camper/Van spesso non ha idea di quanta energia stia realmente producendo o consumando finché non è troppo tardi.</p>
-    </div>
-    <div style="text-align: center;">
-        <h2 style="color: var(--project-accent);">La Soluzione</h2>
-        <p>Vibe Solar trasforma dati complessi in previsioni chiare, permettendo di sapere esattamente quanta autonomia rimane nelle batterie.</p>
-    </div>
-</div>
+            <div style="text-align: center;">
+                <h2 style="color: var(--project-accent);">Problema</h2>
+                <p>Chi vive o viaggia in Camper/Van spesso non ha idea di quanta energia stia realmente producendo o consumando finché non è troppo tardi.</p>
+            </div>
+            <div style="text-align: center;">
+                <h2 style="color: var(--project-accent);">Soluzione</h2>
+                <p>Vibe Solar trasforma dati complessi in previsioni chiare, permettendo di sapere esattamente quanta autonomia rimane nelle batterie.</p>
+            </div>
+        </div>
 
-            <div style="text-align: center; margin-top: 60px;">
-                <h2 class="vibe-title-blue">Esplora l'Interfaccia</h2>
+        <!-- Sezione Esplora l'Interfaccia con carosello -->
+        <div style="text-align: center; margin-top: 60px;">
+            <h2 style="color: var(--project-accent);">Esplora l'Interfaccia</h2>
 
-                <div class="swipe-indicator" >
-                    <div class="swipe-text">TRASCINA PER ESPLORARE</div>
-                    <div class="swipe-hand">
-                        <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
-                            <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
-                            <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
-                            <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
-                        </svg>
+            <div class="swipe-indicator">
+                <div class="swipe-text">TRASCINA PER ESPLORARE</div>
+                <div class="swipe-hand">
+                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                        <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"></path>
+                        <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"></path>
+                        <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="vibe-carousel-container">
+            <div class="vibe-carousel">
+                <article class="carousel-item">
+                    <div class="img-container">
+                        <a href="assets/images/vibesolar1.webp" data-fancybox="gallery" data-caption="Dashboard principale: monitoraggio flussi energetici">
+                            <img src="assets/images/vibesolar1.webp" alt="Dashboard Vibe Solar">
+                        </a>
                     </div>
-                </div>
+                    <div class="caption">
+                        <strong>Dashboard</strong>
+                        <p>Monitoraggio in tempo reale dei flussi energetici divisi per categoria.</p>
+                    </div>
+                </article>
+
+                <article class="carousel-item">
+                    <div class="img-container">
+                        <a href="assets/images/vibesolar2.webp" data-fancybox="gallery" data-caption="Statistiche e previsioni di produzione">
+                            <img src="assets/images/vibesolar2.webp" alt="Statistiche energetiche">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <strong>Report</strong>
+                        <p>Produzione giornaliera prevista divisa ora per ora e tempi di ricarica previsti.</p>
+                    </div>
+                </article>
+
+                <article class="carousel-item">
+                    <div class="img-container">
+                        <a href="assets/images/vibesolar3.webp" data-fancybox="gallery" data-caption="Personalizzazione del sistema (Garage)">
+                            <img src="assets/images/vibesolar3.webp" alt="Impostazioni sistema">
+                        </a>
+                    </div>
+                    <div class="caption">
+                        <strong>Garage</strong>
+                        <p>Personalizza il nome, la tua configurazione e scegli un tema.</p>
+                    </div>
+                </article>
             </div>
+        </div>
 
-            <div class="vibe-carousel-container">
-                <div class="vibe-carousel">
-                    <article class="carousel-item blue-theme">
-                        <div class="img-container">
-                            <a href="assets/images/vibesolar1.webp" data-fancybox="gallery">
-                                <img src="assets/images/vibesolar1.webp" alt="Dashboard Principale">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <strong>Dashboard</strong>
-                            <p>Monitoraggio in tempo reale dei flussi energetici divisi per categoria.</p>
-                        </div>
-                    </article>
+        <!-- Dettagli Tecnici -->
+        <section style="margin-top: 60px;">
+            <h2 style="color: var(--project-accent);">Dettagli Tecnici</h2>
+            <ul>
+                <li><strong>Analisi e previsioni:</strong> Ottenendo la posizione geografica (Lat e Long) e i relativi dati meteorologici, calcola e prevede i flussi energetici in tempo reale separati per le linee di carica.</li>
+                <li><strong>Target:</strong> Camperisti e "Vanlifers", Off-Grid Owners, appassionati e curiosi di energie rinnovabili.</li>
+                <li><strong>Interfaccia:</strong> Semplice, intuitiva ed efficace: fatta su misura per chi vuole avere semplicità senza rinunciare alla professionalità.</li>
+            </ul>
+        </section>
 
-                    <article class="carousel-item blue-theme">
-                        <div class="img-container">
-                            <a href="assets/images/vibesolar2.webp" data-fancybox="gallery">
-                                <img src="assets/images/vibesolar2.webp" alt="Statistiche Energetiche">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <strong>Report</strong>
-                            <p>Produzione giornaliera prevista divisa ora per ora e tempi di ricarica previsti.</p>
-                        </div>
-                    </article>
+        <!-- Call to action -->
+        <section style="text-align: center; margin: 80px 0;">
+            <a href="#" class="btn-contact" style="padding: 20px 40px;">🌞 Scopri Vibe Solar (demo soon)</a>
+        </section>
 
-                    <article class="carousel-item blue-theme">
-                        <div class="img-container">
-                            <a href="assets/images/vibesolar3.webp" data-fancybox="gallery">
-                                <img src="assets/images/vibesolar3.webp" alt="Impostazioni Sistema">
-                            </a>
-                        </div>
-                        <div class="caption">
-                            <strong>Garage</strong>
-                            <p>Personalizza il nome, la tua configurazione e scegli un tema.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-
-            <section>
-                <h2 style="color: var(--project-accent);">Dettagli Tecnici</h2>
-                <ul>
-                    <li><strong>Analisi e previsioni:</strong> Ottenendo la posizione geografica (Lat e Long) e i relativi dati meteorologici, calcola e prevede i flussi energetici in tempo reale separati per le linee di carica.</li>
-                    <li><strong>Target:</strong> Camperisti e "Vanlifers", Off-Grid Owners, appassionati e curiosi di energie rinnovabili.</li>
-                    <li><strong>Interfaccia:</strong> Semplice, intuitiva ed efficace: fatta su misura per chi vuole avere semplicità senza rinunciare alla professionalità.</li>
-                </ul>
-            </section>
-
-            <footer>
-    <a href="index.html" class="link-back-vibe">← Torna a tutti i progetti</a>
-
-    <hr>
-
-    <div class="footer-social">
-        <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
-        <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
-    </div>
-
-    <p class="signature">© 2026 Alexandru Chiscop</p>
-</footer>
+    <footer>
+        <a href="index.html" class="link-back-vibe">← Torna alla home</a>
+        <hr>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
+            <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
+        </div>
+        <p class="signature">© 2026 Alexandru Chiscop</p>
+    </footer>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
-        Fancybox.bind("[data-fancybox='gallery']", {});
+        Fancybox.bind("[data-fancybox='gallery']", {
+            compact: false,
+            idle: false,
+            dragToClose: true
+        });
     </script>
 </body>
 </html>

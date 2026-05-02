@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progetti | Alexandru Chiscop</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Alexandru Chiscop | Progetti</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
 </head>
-<body>
+<body class="project-blue">
 
     <nav class="container">
         <ul>
@@ -90,24 +90,35 @@
 </div>
 </div>
 
-         <footer>
-    <a href="index.html" class="link-back-vibe">← Torna a tutti i progetti</a>
-
-    <hr>
-
-    <div class="footer-social">
-        <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
-        <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
-    </div>
-
-    <p class="signature">© 2026 Alexandru Chiscop</p>
-</footer>
-
+         
+    <footer>
+        <a href="index.html" class="link-back-vibe">← Torna alla home</a>
+        <hr>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
+            <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
+        </div>
+        <p class="signature">© 2026 Alexandru Chiscop</p>
+    </footer>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script>
         Fancybox.bind("[data-fancybox]", { compact: false, idle: false });
+    </script>
+    <script>
+        // Rende cliccabile l'intera card progetto (escluso il pulsante per evitare doppio click)
+        document.querySelectorAll('.project-card').forEach(card => {
+            const btn = card.querySelector('[class*="btn-"]');
+            if (btn && btn.href) {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', (e) => {
+                    // Se l'utente ha cliccato su un link (es. il bottone) non fare nulla
+                    if (e.target.closest('a')) return;
+                    window.location.href = btn.href;
+                });
+            }
+        });
     </script>
 
 </body>

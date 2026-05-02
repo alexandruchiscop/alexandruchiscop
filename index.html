@@ -9,7 +9,7 @@
     <title>Alexandru Chiscop | Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
 </head>
 <body class="project-blue">
 
@@ -78,24 +78,35 @@
             <a href="progetti.html" class="btn-contact">Esplora l'archivio completo 📂</a>
         </section>
 
-        <footer>
-    <a href="index.html" class="link-back-vibe">← Torna a tutti i progetti</a>
-
-    <hr>
-
-    <div class="footer-social">
-        <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
-        <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
-    </div>
-
-    <p class="signature">© 2026 Alexandru Chiscop</p>
-</footer>
+       <footer>
+        <a href="index.html" class="link-back-vibe">← Torna alla home</a>
+        <hr>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/alexandru-c-4650ba213/" target="_blank">LinkedIn</a>
+            <a href="mailto:chiscopalexandru97@gmail.com">Email</a>
+        </div>
+        <p class="signature">© 2026 Alexandru Chiscop</p>
+    </footer>
     </main>
 
     <script>
         const htmlTag = document.documentElement;
         const savedTheme = localStorage.getItem('theme') || 'dark';
         htmlTag.setAttribute('data-theme', savedTheme);
+    </script>
+    <script>
+        // Rende cliccabile l'intera card progetto (escluso il pulsante per evitare doppio click)
+        document.querySelectorAll('.project-card').forEach(card => {
+            const btn = card.querySelector('[class*="btn-"]');
+            if (btn && btn.href) {
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', (e) => {
+                    // Se l'utente ha cliccato su un link (es. il bottone) non fare nulla
+                    if (e.target.closest('a')) return;
+                    window.location.href = btn.href;
+                });
+            }
+        });
     </script>
 </body>
 </html>
